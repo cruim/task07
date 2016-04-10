@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,11 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collection\ArrayListWrapper.cs" />
+    <Compile Include="Collection\cruim_TestCollection.cs" />
+    <Compile Include="Collection\DictionaryStringWrapper.cs" />
+    <Compile Include="Collection\HashSetWrapper.cs" />
+    <Compile Include="Collection\HashTableStringWrapper.cs" />
+    <Compile Include="Collection\ListWrapper.cs" />
+    <Compile Include="Collection\SortedListWrapper.cs" />
+    <Compile Include="Collection\StringArrayWrapper.cs" />
+    <Compile Include="Interfaces\ICollectionWrapper.cs" />
+    <Compile Include="Model\CollectionType.cs" />
+    <Compile Include="Model\ConsoleExit.cs" />
+    <Compile Include="Model\RandomClass.cs" />
+    <Compile Include="Model\StartApp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
