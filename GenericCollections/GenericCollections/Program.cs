@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GenericCollections.Model;
 
 namespace GenericCollections
 {
 	class Program
 	{
+
 		static void Main(string[] args)
 		{
+			StartApp startApp = new StartApp();
+			startApp.OnStartApp();
 		}
 	}
 }
